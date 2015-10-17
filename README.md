@@ -1,2 +1,1 @@
-# aa6my
-Private Torrent Tracker
+# Aa6my
