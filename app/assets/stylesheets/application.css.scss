@@ -1,1 +1,15 @@
+
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import cerulean variables
+@import "bootswatch/cyborg/variables";
+
+// Then bootstrap itself
 @import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/cyborg/bootswatch";
+
+@import "font-awesome";
