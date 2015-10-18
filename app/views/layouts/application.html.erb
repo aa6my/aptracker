@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aa6my</title>
+  <title>aa6my</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -20,7 +20,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">DRY</a>
+		      <a class="navbar-brand" href="#">aa6my</a>
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -47,7 +47,7 @@
 		            <li><a href="#">Music</a></li>
 		          </ul>
 		        </li>
-		        <li><a href="#">Froums</a></li>
+		        <li><a href="#">Forums</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		      	<li><a href="#"><i class="fa fa-fw fa-envelope-o"></i> Message</a></li>
@@ -78,8 +78,76 @@
 		  <li><a href="#">Library</a></li>
 		  <li class="active">Data</li>
 		</ul>
-
-		<%= yield %>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		  	<div class="col-md-9">
+		  		<%= yield %>
+		  	</div>
+		  	<div class="col-md-3">
+				<div class="panel panel-default">
+				  <div class="panel-heading">Site Stats</div>
+				  <div class="panel-body">
+					<table class="table table-striped table-hover ">
+					  <tbody>
+					    <tr>
+					      <td>Users</td>
+					      <td>98,599</td>
+					    </tr>
+					    <tr>
+					      <td>Torrents</td>
+					      <td>29,391</td>
+					    </tr>
+					    <tr>
+					      <td>Movies</td>
+					      <td>9,174</td>
+					    </tr>
+					    <tr>
+					      <td>TV-Shows</td>
+					      <td>2,753</td>
+					    </tr>
+					    <tr>
+					      <td>Music</td>
+					      <td>441</td>
+					    </tr>
+					    <tr>
+					      <td>Seeds</td>
+					      <td>223,417</td>
+					    </tr>
+					    <tr>
+					      <td>Leeches</td>
+					      <td>10,276</td>
+					    </tr>
+					    <tr>
+					      <td>Peers</td>
+					      <td>233,693</td>
+					    </tr>
+					    <tr>
+					      <td>Current Download</td>
+					      <td>82.40 TB</td>
+					    </tr>
+					    <tr>
+					      <td>Current Upload</td>
+					      <td>392.71 TB</td>
+					    </tr>
+					    <tr>
+					      <td>Total Download</td>
+					      <td>5.71 PB</td>
+					    </tr>
+					    <tr>
+					      <td>Total Upload</td>
+					      <td>101.97 PB</td>
+					    </tr>
+					  </tbody>
+					</table> 
+				  </div>
+				</div>
+		  	</div>
+		  </div>
+		  <div class="panel-footer">
+		  	Panel footer
+		  </div>
+		</div>
+		
 	</div>
 
 
