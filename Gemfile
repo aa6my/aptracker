@@ -17,6 +17,8 @@ gem 'autoprefixer-rails'
 gem "font-awesome-rails"
 gem 'bootswatch-rails'
 
+gem 'devise', '~> 3.5', '>= 3.5.2'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
@@ -32,7 +34,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt'
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

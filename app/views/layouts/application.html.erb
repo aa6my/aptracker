@@ -10,6 +10,7 @@
 <body>
 
 <div class="container">
+	<% if user_signed_in? %>
 	<div class="col-md-12">
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
@@ -63,7 +64,10 @@
 		            <li><a href="#">Torrent History</a></li>
 		            <li><a href="#">Bonus Points</a></li>
 		            <li class="divider"></li>
-		            <li><a href="#">Logout</a></li>
+		            
+		            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+		            
+
 		          </ul>
 		        </li>
 		      </ul>
@@ -71,18 +75,23 @@
 		  </div>
 		</nav>
 	</div>
+	<% end %>
 
-	<div class="col-md-12">
+	<div <% if user_signed_in? %> class="col-md-12" <% else %> class="col-md-4 col-lg-offset-4"<% end %>>
+		<% if user_signed_in? %>
 		<ul class="breadcrumb">
 		  <li><a href="#">Home</a></li>
 		  <li><a href="#">Library</a></li>
 		  <li class="active">Data</li>
 		</ul>
+		<% end %>
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		  	<div class="col-md-9">
+
+<!-- 		       <p class="notice text-success"><%= notice %></p>
+		       <p class="alert text-danger"><%= alert %></p> -->	
 		  		<%= yield %>
-		  	</div>
+		  	<% if user_signed_in? %>
 		  	<div class="col-md-3">
 				<div class="panel panel-default">
 				  <div class="panel-heading">Site Stats</div>
@@ -142,6 +151,7 @@
 				  </div>
 				</div>
 		  	</div>
+		  	<% end %>
 		  </div>
 		  <div class="panel-footer">
 		  	Panel footer
